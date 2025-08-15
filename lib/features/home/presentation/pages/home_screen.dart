@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omdbapp/core/gen/assets.gen.dart';
-import 'package:omdbapp/core/theme/omdb_text_style.dart';
-import 'package:omdbapp/core/widgets/omdb_button.dart';
+import 'package:omdbapp/core/gen/colors.gen.dart';
 import 'package:omdbapp/core/widgets/widgets.dart';
 import 'package:omdbapp/features/home/presentation/pages/horizontal_list_movie_widget.dart';
+import 'package:omdbapp/features/search/presentation/pages/search_delegate.dart';
+
+import '../../../../core/gen/assets.gen.dart';
+import 'movie_promotion_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,29 +29,46 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("For Alex"),
         centerTitle: false,
         backgroundColor: Color(0xFFD22F26),
-      ),
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFFD22F26),
-                  Color(0xFF8B1A1A),
-                  Color(0xFF4A0E0E),
-                  Color(0xFF1A0505),
-                  Color(0xFF000000),
-                ],
-                stops: [0.0, 0.3, 0.6, 0.8, 1.0],
-              ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Assets.svg.downloadIcon.svg(
+              colorFilter: ColorFilter.mode(ColorValue.white, BlendMode.srcIn),
             ),
           ),
-          SafeArea(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
+          IconButton(
+            onPressed: () async{
+              await showSearch(context: context, delegate: OmDbSearchDelegate());
+            },
+            icon: Assets.svg.searchIcon.svg(
+              colorFilter: ColorFilter.mode(ColorValue.white, BlendMode.srcIn),
+            ),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: SafeArea(
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0xFFD22F26),
+                        Color(0xFF8B1A1A),
+                        Color(0xFF1A0505),
+                        Color(0xFF000000),
+                      ],
+                      stops: [0.0, 0.3, 0.6, 1.0],
+                    ),
+                  ),
+                ),
+              ),
+              Column(
                 children: [
                   Align(
                     alignment: Alignment.topLeft,
@@ -63,53 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 16),
                   MoviePromotion(),
-                  HorizontalListMovieWidget(),
+                  const SizedBox(height: 16),
+                  HorizontalListMovieWidget(title: "Your Next Watch"),
+                  const SizedBox(height: 16),
+                  HorizontalListMovieWidget(title: "Top Week"),
+                  const SizedBox(height: 16),
+                  HorizontalListMovieWidget(title: "Up Coming"),
                 ],
               ),
-            ),
+            ],
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class MoviePromotion extends StatelessWidget {
-  const MoviePromotion({super.key,});
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.85,
-
-      child: Stack(
-        children: [
-          Center(child: Assets.img.sample.image()),
-          Positioned(
-            bottom: 16,
-            right: 16,
-            left: 16,
-            child: Row(
-              children: [
-                Expanded(
-                  child: OmdbButton(
-                    icon: Icon(Icons.play_arrow),
-                    onPress: () {},
-                    child: Text("Play", style: OMDBTextStyles.titleMedium),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: OmdbButton(
-                    style: OmdbButton.secondary,
-                    icon: Icon(Icons.add),
-                    onPress: () {},
-                    child: Text("My List", style: OMDBTextStyles.titleMedium),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
