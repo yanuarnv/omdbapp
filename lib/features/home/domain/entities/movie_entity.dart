@@ -4,8 +4,8 @@ part 'movie_entity.freezed.dart';
 part 'movie_entity.g.dart';
 // Entity for individual movie
 @freezed
-abstract class Movie with _$Movie {
-  const factory Movie({
+abstract class MovieEntity with _$MovieEntity {
+  const factory MovieEntity({
     required bool adult,
     @JsonKey(name: 'backdrop_path') String? backdropPath,
     required List<int> genreIds,
@@ -20,16 +20,16 @@ abstract class Movie with _$Movie {
     required bool video,
     @JsonKey(name: 'vote_average') required double voteAverage,
     @JsonKey(name: 'vote_count') required int voteCount,
-  }) = _Movie;
+  }) = _MovieEntity;
 
-  factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);
+  factory MovieEntity.fromJson(Map<String, dynamic> json) => _$MovieEntityFromJson(json);
 }
 
 @freezed
 abstract class MovieResponse with _$MovieResponse {
   const factory MovieResponse({
     required int page,
-    required List<Movie> results,
+    required List<MovieEntity> results,
     @JsonKey(name: 'total_pages') required int totalPages,
     @JsonKey(name: 'total_results') required int totalResults,
   }) = _MovieResponse;

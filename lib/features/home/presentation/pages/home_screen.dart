@@ -64,7 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ValueListenableBuilder(
                   valueListenable: _isScrolled,
                   builder: (context, value, _) {
-                    print(value);
                     return AnimatedContainer(
                       duration: const Duration(milliseconds: 200),
                       decoration: BoxDecoration(

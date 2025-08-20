@@ -128,12 +128,12 @@ return error(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initial,TResult Function()?  loading,TResult Function()?  success,TResult Function( String message)?  error,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initial,TResult Function()?  loading,TResult Function( List<MovieEntity> topRated,  List<MovieEntity> popular,  List<MovieEntity> upComing)?  success,TResult Function( String message)?  error,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
 return initial();case _Loading() when loading != null:
 return loading();case _Success() when success != null:
-return success();case _Error() when error != null:
+return success(_that.topRated,_that.popular,_that.upComing);case _Error() when error != null:
 return error(_that.message);case _:
   return orElse();
 
@@ -152,12 +152,12 @@ return error(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initial,required TResult Function()  loading,required TResult Function()  success,required TResult Function( String message)  error,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initial,required TResult Function()  loading,required TResult Function( List<MovieEntity> topRated,  List<MovieEntity> popular,  List<MovieEntity> upComing)  success,required TResult Function( String message)  error,}) {final _that = this;
 switch (_that) {
 case _Initial():
 return initial();case _Loading():
 return loading();case _Success():
-return success();case _Error():
+return success(_that.topRated,_that.popular,_that.upComing);case _Error():
 return error(_that.message);case _:
   throw StateError('Unexpected subclass');
 
@@ -175,12 +175,12 @@ return error(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initial,TResult? Function()?  loading,TResult? Function()?  success,TResult? Function( String message)?  error,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initial,TResult? Function()?  loading,TResult? Function( List<MovieEntity> topRated,  List<MovieEntity> popular,  List<MovieEntity> upComing)?  success,TResult? Function( String message)?  error,}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
 return initial();case _Loading() when loading != null:
 return loading();case _Success() when success != null:
-return success();case _Error() when error != null:
+return success(_that.topRated,_that.popular,_that.upComing);case _Error() when error != null:
 return error(_that.message);case _:
   return null;
 
@@ -257,33 +257,89 @@ String toString() {
 
 
 class _Success implements HomeState {
-  const _Success();
+  const _Success({required final  List<MovieEntity> topRated, required final  List<MovieEntity> popular, required final  List<MovieEntity> upComing}): _topRated = topRated,_popular = popular,_upComing = upComing;
   
 
+ final  List<MovieEntity> _topRated;
+ List<MovieEntity> get topRated {
+  if (_topRated is EqualUnmodifiableListView) return _topRated;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_topRated);
+}
+
+ final  List<MovieEntity> _popular;
+ List<MovieEntity> get popular {
+  if (_popular is EqualUnmodifiableListView) return _popular;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_popular);
+}
+
+ final  List<MovieEntity> _upComing;
+ List<MovieEntity> get upComing {
+  if (_upComing is EqualUnmodifiableListView) return _upComing;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_upComing);
+}
 
 
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$SuccessCopyWith<_Success> get copyWith => __$SuccessCopyWithImpl<_Success>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Success);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Success&&const DeepCollectionEquality().equals(other._topRated, _topRated)&&const DeepCollectionEquality().equals(other._popular, _popular)&&const DeepCollectionEquality().equals(other._upComing, _upComing));
 }
 
 
 @override
-int get hashCode => runtimeType.hashCode;
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_topRated),const DeepCollectionEquality().hash(_popular),const DeepCollectionEquality().hash(_upComing));
 
 @override
 String toString() {
-  return 'HomeState.success()';
+  return 'HomeState.success(topRated: $topRated, popular: $popular, upComing: $upComing)';
 }
 
 
 }
 
+/// @nodoc
+abstract mixin class _$SuccessCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$SuccessCopyWith(_Success value, $Res Function(_Success) _then) = __$SuccessCopyWithImpl;
+@useResult
+$Res call({
+ List<MovieEntity> topRated, List<MovieEntity> popular, List<MovieEntity> upComing
+});
 
 
+
+
+}
+/// @nodoc
+class __$SuccessCopyWithImpl<$Res>
+    implements _$SuccessCopyWith<$Res> {
+  __$SuccessCopyWithImpl(this._self, this._then);
+
+  final _Success _self;
+  final $Res Function(_Success) _then;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? topRated = null,Object? popular = null,Object? upComing = null,}) {
+  return _then(_Success(
+topRated: null == topRated ? _self._topRated : topRated // ignore: cast_nullable_to_non_nullable
+as List<MovieEntity>,popular: null == popular ? _self._popular : popular // ignore: cast_nullable_to_non_nullable
+as List<MovieEntity>,upComing: null == upComing ? _self._upComing : upComing // ignore: cast_nullable_to_non_nullable
+as List<MovieEntity>,
+  ));
+}
+
+
+}
 
 /// @nodoc
 

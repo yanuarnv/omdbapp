@@ -6,7 +6,7 @@ part of 'movie_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Movie _$MovieFromJson(Map<String, dynamic> json) => _Movie(
+_MovieEntity _$MovieEntityFromJson(Map<String, dynamic> json) => _MovieEntity(
   adult: json['adult'] as bool,
   backdropPath: json['backdrop_path'] as String?,
   genreIds: (json['genreIds'] as List<dynamic>)
@@ -25,28 +25,29 @@ _Movie _$MovieFromJson(Map<String, dynamic> json) => _Movie(
   voteCount: (json['vote_count'] as num).toInt(),
 );
 
-Map<String, dynamic> _$MovieToJson(_Movie instance) => <String, dynamic>{
-  'adult': instance.adult,
-  'backdrop_path': instance.backdropPath,
-  'genreIds': instance.genreIds,
-  'id': instance.id,
-  'original_language': instance.originalLanguage,
-  'original_title': instance.originalTitle,
-  'overview': instance.overview,
-  'popularity': instance.popularity,
-  'poster_path': instance.posterPath,
-  'release_date': instance.releaseDate,
-  'title': instance.title,
-  'video': instance.video,
-  'vote_average': instance.voteAverage,
-  'vote_count': instance.voteCount,
-};
+Map<String, dynamic> _$MovieEntityToJson(_MovieEntity instance) =>
+    <String, dynamic>{
+      'adult': instance.adult,
+      'backdrop_path': instance.backdropPath,
+      'genreIds': instance.genreIds,
+      'id': instance.id,
+      'original_language': instance.originalLanguage,
+      'original_title': instance.originalTitle,
+      'overview': instance.overview,
+      'popularity': instance.popularity,
+      'poster_path': instance.posterPath,
+      'release_date': instance.releaseDate,
+      'title': instance.title,
+      'video': instance.video,
+      'vote_average': instance.voteAverage,
+      'vote_count': instance.voteCount,
+    };
 
 _MovieResponse _$MovieResponseFromJson(Map<String, dynamic> json) =>
     _MovieResponse(
       page: (json['page'] as num).toInt(),
       results: (json['results'] as List<dynamic>)
-          .map((e) => Movie.fromJson(e as Map<String, dynamic>))
+          .map((e) => MovieEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
       totalPages: (json['total_pages'] as num).toInt(),
       totalResults: (json['total_results'] as num).toInt(),
