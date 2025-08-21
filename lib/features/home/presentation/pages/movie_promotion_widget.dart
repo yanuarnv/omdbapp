@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omdbapp/core/gen/assets.gen.dart';
+import 'package:omdbapp/gen/assets.gen.dart';
 import 'package:omdbapp/core/theme/omdb_text_style.dart';
 import 'package:omdbapp/core/widgets/widgets.dart';
 class MoviePromotion extends StatelessWidget {

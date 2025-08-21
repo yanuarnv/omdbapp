@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$MovieEntity {
 
- bool get adult;@JsonKey(name: 'backdrop_path') String? get backdropPath; List<int> get genreIds; int get id;@JsonKey(name: 'original_language') String get originalLanguage;@JsonKey(name: 'original_title') String get originalTitle; String get overview; double get popularity;@JsonKey(name: 'poster_path') String? get posterPath;@JsonKey(name: 'release_date') String get releaseDate; String get title; bool get video;@JsonKey(name: 'vote_average') double get voteAverage;@JsonKey(name: 'vote_count') int get voteCount;
+ bool get adult;@JsonKey(name: 'backdrop_path') String? get backdropPath;@JsonKey(name: 'genre_ids', defaultValue: []) List<int>? get genreIds; int get id;@JsonKey(name: 'original_language') String get originalLanguage;@JsonKey(name: 'original_title') String get originalTitle; String get overview; double get popularity;@JsonKey(name: 'poster_path') String? get posterPath;@JsonKey(name: 'release_date') String get releaseDate; String get title; bool get video;@JsonKey(name: 'vote_average') double get voteAverage;@JsonKey(name: 'vote_count') int get voteCount;
 /// Create a copy of MovieEntity
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $MovieEntityCopyWith<$Res>  {
   factory $MovieEntityCopyWith(MovieEntity value, $Res Function(MovieEntity) _then) = _$MovieEntityCopyWithImpl;
 @useResult
 $Res call({
- bool adult,@JsonKey(name: 'backdrop_path') String? backdropPath, List<int> genreIds, int id,@JsonKey(name: 'original_language') String originalLanguage,@JsonKey(name: 'original_title') String originalTitle, String overview, double popularity,@JsonKey(name: 'poster_path') String? posterPath,@JsonKey(name: 'release_date') String releaseDate, String title, bool video,@JsonKey(name: 'vote_average') double voteAverage,@JsonKey(name: 'vote_count') int voteCount
+ bool adult,@JsonKey(name: 'backdrop_path') String? backdropPath,@JsonKey(name: 'genre_ids', defaultValue: []) List<int>? genreIds, int id,@JsonKey(name: 'original_language') String originalLanguage,@JsonKey(name: 'original_title') String originalTitle, String overview, double popularity,@JsonKey(name: 'poster_path') String? posterPath,@JsonKey(name: 'release_date') String releaseDate, String title, bool video,@JsonKey(name: 'vote_average') double voteAverage,@JsonKey(name: 'vote_count') int voteCount
 });
 
 
@@ -65,12 +65,12 @@ class _$MovieEntityCopyWithImpl<$Res>
 
 /// Create a copy of MovieEntity
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? adult = null,Object? backdropPath = freezed,Object? genreIds = null,Object? id = null,Object? originalLanguage = null,Object? originalTitle = null,Object? overview = null,Object? popularity = null,Object? posterPath = freezed,Object? releaseDate = null,Object? title = null,Object? video = null,Object? voteAverage = null,Object? voteCount = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? adult = null,Object? backdropPath = freezed,Object? genreIds = freezed,Object? id = null,Object? originalLanguage = null,Object? originalTitle = null,Object? overview = null,Object? popularity = null,Object? posterPath = freezed,Object? releaseDate = null,Object? title = null,Object? video = null,Object? voteAverage = null,Object? voteCount = null,}) {
   return _then(_self.copyWith(
 adult: null == adult ? _self.adult : adult // ignore: cast_nullable_to_non_nullable
 as bool,backdropPath: freezed == backdropPath ? _self.backdropPath : backdropPath // ignore: cast_nullable_to_non_nullable
-as String?,genreIds: null == genreIds ? _self.genreIds : genreIds // ignore: cast_nullable_to_non_nullable
-as List<int>,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,genreIds: freezed == genreIds ? _self.genreIds : genreIds // ignore: cast_nullable_to_non_nullable
+as List<int>?,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,originalLanguage: null == originalLanguage ? _self.originalLanguage : originalLanguage // ignore: cast_nullable_to_non_nullable
 as String,originalTitle: null == originalTitle ? _self.originalTitle : originalTitle // ignore: cast_nullable_to_non_nullable
 as String,overview: null == overview ? _self.overview : overview // ignore: cast_nullable_to_non_nullable
@@ -166,7 +166,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath,  List<int> genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath, @JsonKey(name: 'genre_ids', defaultValue: [])  List<int>? genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MovieEntity() when $default != null:
 return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.originalLanguage,_that.originalTitle,_that.overview,_that.popularity,_that.posterPath,_that.releaseDate,_that.title,_that.video,_that.voteAverage,_that.voteCount);case _:
@@ -187,7 +187,7 @@ return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.ori
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath,  List<int> genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath, @JsonKey(name: 'genre_ids', defaultValue: [])  List<int>? genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)  $default,) {final _that = this;
 switch (_that) {
 case _MovieEntity():
 return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.originalLanguage,_that.originalTitle,_that.overview,_that.popularity,_that.posterPath,_that.releaseDate,_that.title,_that.video,_that.voteAverage,_that.voteCount);case _:
@@ -207,7 +207,7 @@ return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.ori
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath,  List<int> genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool adult, @JsonKey(name: 'backdrop_path')  String? backdropPath, @JsonKey(name: 'genre_ids', defaultValue: [])  List<int>? genreIds,  int id, @JsonKey(name: 'original_language')  String originalLanguage, @JsonKey(name: 'original_title')  String originalTitle,  String overview,  double popularity, @JsonKey(name: 'poster_path')  String? posterPath, @JsonKey(name: 'release_date')  String releaseDate,  String title,  bool video, @JsonKey(name: 'vote_average')  double voteAverage, @JsonKey(name: 'vote_count')  int voteCount)?  $default,) {final _that = this;
 switch (_that) {
 case _MovieEntity() when $default != null:
 return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.originalLanguage,_that.originalTitle,_that.overview,_that.popularity,_that.posterPath,_that.releaseDate,_that.title,_that.video,_that.voteAverage,_that.voteCount);case _:
@@ -222,16 +222,18 @@ return $default(_that.adult,_that.backdropPath,_that.genreIds,_that.id,_that.ori
 @JsonSerializable()
 
 class _MovieEntity implements MovieEntity {
-  const _MovieEntity({required this.adult, @JsonKey(name: 'backdrop_path') this.backdropPath, required final  List<int> genreIds, required this.id, @JsonKey(name: 'original_language') required this.originalLanguage, @JsonKey(name: 'original_title') required this.originalTitle, required this.overview, required this.popularity, @JsonKey(name: 'poster_path') this.posterPath, @JsonKey(name: 'release_date') required this.releaseDate, required this.title, required this.video, @JsonKey(name: 'vote_average') required this.voteAverage, @JsonKey(name: 'vote_count') required this.voteCount}): _genreIds = genreIds;
+  const _MovieEntity({required this.adult, @JsonKey(name: 'backdrop_path') this.backdropPath, @JsonKey(name: 'genre_ids', defaultValue: []) final  List<int>? genreIds, required this.id, @JsonKey(name: 'original_language') required this.originalLanguage, @JsonKey(name: 'original_title') required this.originalTitle, required this.overview, required this.popularity, @JsonKey(name: 'poster_path') this.posterPath, @JsonKey(name: 'release_date') required this.releaseDate, required this.title, required this.video, @JsonKey(name: 'vote_average') required this.voteAverage, @JsonKey(name: 'vote_count') required this.voteCount}): _genreIds = genreIds;
   factory _MovieEntity.fromJson(Map<String, dynamic> json) => _$MovieEntityFromJson(json);
 
 @override final  bool adult;
 @override@JsonKey(name: 'backdrop_path') final  String? backdropPath;
- final  List<int> _genreIds;
-@override List<int> get genreIds {
+ final  List<int>? _genreIds;
+@override@JsonKey(name: 'genre_ids', defaultValue: []) List<int>? get genreIds {
+  final value = _genreIds;
+  if (value == null) return null;
   if (_genreIds is EqualUnmodifiableListView) return _genreIds;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_genreIds);
+  return EqualUnmodifiableListView(value);
 }
 
 @override final  int id;
@@ -279,7 +281,7 @@ abstract mixin class _$MovieEntityCopyWith<$Res> implements $MovieEntityCopyWith
   factory _$MovieEntityCopyWith(_MovieEntity value, $Res Function(_MovieEntity) _then) = __$MovieEntityCopyWithImpl;
 @override @useResult
 $Res call({
- bool adult,@JsonKey(name: 'backdrop_path') String? backdropPath, List<int> genreIds, int id,@JsonKey(name: 'original_language') String originalLanguage,@JsonKey(name: 'original_title') String originalTitle, String overview, double popularity,@JsonKey(name: 'poster_path') String? posterPath,@JsonKey(name: 'release_date') String releaseDate, String title, bool video,@JsonKey(name: 'vote_average') double voteAverage,@JsonKey(name: 'vote_count') int voteCount
+ bool adult,@JsonKey(name: 'backdrop_path') String? backdropPath,@JsonKey(name: 'genre_ids', defaultValue: []) List<int>? genreIds, int id,@JsonKey(name: 'original_language') String originalLanguage,@JsonKey(name: 'original_title') String originalTitle, String overview, double popularity,@JsonKey(name: 'poster_path') String? posterPath,@JsonKey(name: 'release_date') String releaseDate, String title, bool video,@JsonKey(name: 'vote_average') double voteAverage,@JsonKey(name: 'vote_count') int voteCount
 });
 
 
@@ -296,12 +298,12 @@ class __$MovieEntityCopyWithImpl<$Res>
 
 /// Create a copy of MovieEntity
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? adult = null,Object? backdropPath = freezed,Object? genreIds = null,Object? id = null,Object? originalLanguage = null,Object? originalTitle = null,Object? overview = null,Object? popularity = null,Object? posterPath = freezed,Object? releaseDate = null,Object? title = null,Object? video = null,Object? voteAverage = null,Object? voteCount = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? adult = null,Object? backdropPath = freezed,Object? genreIds = freezed,Object? id = null,Object? originalLanguage = null,Object? originalTitle = null,Object? overview = null,Object? popularity = null,Object? posterPath = freezed,Object? releaseDate = null,Object? title = null,Object? video = null,Object? voteAverage = null,Object? voteCount = null,}) {
   return _then(_MovieEntity(
 adult: null == adult ? _self.adult : adult // ignore: cast_nullable_to_non_nullable
 as bool,backdropPath: freezed == backdropPath ? _self.backdropPath : backdropPath // ignore: cast_nullable_to_non_nullable
-as String?,genreIds: null == genreIds ? _self._genreIds : genreIds // ignore: cast_nullable_to_non_nullable
-as List<int>,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,genreIds: freezed == genreIds ? _self._genreIds : genreIds // ignore: cast_nullable_to_non_nullable
+as List<int>?,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,originalLanguage: null == originalLanguage ? _self.originalLanguage : originalLanguage // ignore: cast_nullable_to_non_nullable
 as String,originalTitle: null == originalTitle ? _self.originalTitle : originalTitle // ignore: cast_nullable_to_non_nullable
 as String,overview: null == overview ? _self.overview : overview // ignore: cast_nullable_to_non_nullable

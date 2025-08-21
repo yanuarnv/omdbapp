@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omdbapp/features/home/presentation/pages/home_screen.dart';
 
-import '../../../../core/gen/assets.gen.dart';
+import '../../../../gen/assets.gen.dart';
 
 
 class MainScreen extends StatefulWidget {

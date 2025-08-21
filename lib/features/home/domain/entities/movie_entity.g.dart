@@ -9,9 +9,11 @@ part of 'movie_entity.dart';
 _MovieEntity _$MovieEntityFromJson(Map<String, dynamic> json) => _MovieEntity(
   adult: json['adult'] as bool,
   backdropPath: json['backdrop_path'] as String?,
-  genreIds: (json['genreIds'] as List<dynamic>)
-      .map((e) => (e as num).toInt())
-      .toList(),
+  genreIds:
+      (json['genre_ids'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList() ??
+      [],
   id: (json['id'] as num).toInt(),
   originalLanguage: json['original_language'] as String,
   originalTitle: json['original_title'] as String,
@@ -29,7 +31,7 @@ Map<String, dynamic> _$MovieEntityToJson(_MovieEntity instance) =>
     <String, dynamic>{
       'adult': instance.adult,
       'backdrop_path': instance.backdropPath,
-      'genreIds': instance.genreIds,
+      'genre_ids': instance.genreIds,
       'id': instance.id,
       'original_language': instance.originalLanguage,
       'original_title': instance.originalTitle,

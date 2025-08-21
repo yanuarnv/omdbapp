@@ -1,12 +1,13 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import '../error/failure.dart';
 
 String mapFailureToMessage(Failure failure) {
-  switch (failure.runtimeType) {
-    case ServerFailure server:
-      return server.msg;
-    case CacheFailure cache:
-      return cache.msg;
-    default:
-      return 'Unexpected error';
+  if (failure is ServerFailure) {
+    return failure.msg;
+  } else if (failure is CacheFailure) {
+    return failure.msg;
+  }else{
+    return "Something went wrong";
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:omdbapp/core/widgets/widgets.dart';
 
 import '../../features/search/presentation/pages/search_delegate.dart';
-import '../gen/assets.gen.dart';
-import '../gen/colors.gen.dart';
+import '../../gen/assets.gen.dart';
+import '../../gen/colors.gen.dart';
 
 class OmdbAppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String title;

@@ -1,11 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 import 'package:omdbapp/core/error/failure.dart';
 import 'package:omdbapp/core/usecase/usecase.dart';
 import 'package:omdbapp/features/home/domain/repositories/home_repository.dart';
 
 import '../entities/movie_entity.dart';
 
+@Injectable()
 class GetUserMovies implements UseCase<List<MovieEntity>, Params> {
   final HomeRepository repository;
 

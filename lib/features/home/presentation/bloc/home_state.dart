@@ -1,17 +1,26 @@
 part of 'home_cubit.dart';
 
-@freezed
-class HomeState with _$HomeState {
-  const factory HomeState.initial() = _Initial;
+sealed class HomeState extends Equatable {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
 
-  const factory HomeState.loading() = _Loading;
+class HomeInitial extends HomeState {}
 
-  const factory HomeState.success({
-    required List<MovieEntity> topRated,
-    required List<MovieEntity> popular,
-    required List<MovieEntity> upComing,
-  }) = _Success;
+class HomeSuccess extends HomeState {
+  final List<MovieEntity> movies;
 
-  const factory HomeState.error(String message) = _Error;
+  HomeSuccess({required this.movies});
 
+  @override
+  List<Object?> get props => [movies];
+}
+
+class HomeLoading extends HomeState {}
+
+class HomeFailure extends HomeState {
+  final String message;
+
+  HomeFailure(this.message);
 }

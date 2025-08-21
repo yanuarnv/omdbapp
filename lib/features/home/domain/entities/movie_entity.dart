@@ -1,14 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'movie_entity.freezed.dart';
+
 part 'movie_entity.g.dart';
+
 // Entity for individual movie
 @freezed
 abstract class MovieEntity with _$MovieEntity {
   const factory MovieEntity({
     required bool adult,
     @JsonKey(name: 'backdrop_path') String? backdropPath,
-    required List<int> genreIds,
+    @JsonKey(name: 'genre_ids',defaultValue: []) List<int>? genreIds,
     required int id,
     @JsonKey(name: 'original_language') required String originalLanguage,
     @JsonKey(name: 'original_title') required String originalTitle,
@@ -22,7 +24,8 @@ abstract class MovieEntity with _$MovieEntity {
     @JsonKey(name: 'vote_count') required int voteCount,
   }) = _MovieEntity;
 
-  factory MovieEntity.fromJson(Map<String, dynamic> json) => _$MovieEntityFromJson(json);
+  factory MovieEntity.fromJson(Map<String, dynamic> json) =>
+      _$MovieEntityFromJson(json);
 }
 
 @freezed
