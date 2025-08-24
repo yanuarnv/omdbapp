@@ -1,11 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:go_router/go_router.dart';
+import 'package:omdbapp/features/home/presentation/pages/movie_details_screen.dart';
 import 'package:omdbapp/gen/colors.gen.dart';
 import 'package:omdbapp/core/theme/omdb_text_style.dart';
 import 'package:omdbapp/features/home/domain/entities/movie_entity.dart';
 import 'package:omdbapp/features/home/presentation/bloc/home_cubit.dart';
 
+import '../../../../core/router/omdb_router.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../../core/widgets/widgets.dart';
 
@@ -31,7 +35,7 @@ class _HorizontalListMovieWidgetState extends State<HorizontalListMovieWidget> {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       bloc: widget.provider,
-      builder: (context, state) {
+      builder: (_, state) {
         if (state is HomeSuccess) {
           return Padding(
             padding: const EdgeInsets.only(left: 16.0),
@@ -47,16 +51,28 @@ class _HorizontalListMovieWidgetState extends State<HorizontalListMovieWidget> {
                     shrinkWrap: false,
                     scrollDirection: Axis.horizontal,
                     separatorBuilder: (_, __) => const SizedBox(width: 8),
-                    itemBuilder: (c, index) => Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        CustomImageNetworkWidget(
-                          src: state.movies[index].posterPath!,
-                          aspectRatio: 0.65,
-                          fit: BoxFit.cover,
-                        ),
-                        Assets.img.playLarge.image(width: 54, height: 54),
-                      ],
+                    itemBuilder: (c, index) => GestureDetector(
+                      onTap: () async {
+                        await showAdaptiveDialog(
+                          context: context,
+                          builder: (_) => Dialog.fullscreen(
+                            child: MovieDetailsScreen(
+                              model: state.movies[index],
+                            ),
+                          ),
+                        );
+                      },
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          CustomImageNetworkWidget(
+                            src: state.movies[index].posterPath!,
+                            aspectRatio: 0.65,
+                            fit: BoxFit.cover,
+                          ),
+                          Assets.img.playLarge.image(width: 54, height: 54),
+                        ],
+                      ),
                     ),
                   ),
                 ),

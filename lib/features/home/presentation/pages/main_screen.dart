@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:omdbapp/features/home/presentation/pages/home_screen.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../core/router/omdb_router.dart';
 import '../../../../gen/assets.gen.dart';
 
-
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  final Widget child;
+
+  const MainScreen({super.key, required this.child});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -13,18 +15,16 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final ValueNotifier<int> _selectedIndex = ValueNotifier(0);
-  static const TextStyle optionStyle = TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.bold,
-  );
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    Text('Index 1: Business', style: optionStyle),
-    Text('Index 2: School', style: optionStyle),
-  ];
 
   void _onItemTapped(int index) {
     _selectedIndex.value = index;
+    if (index == 0) {
+      context.go(Routes.HOME);
+    } else if (index == 1) {
+      context.go(Routes.NEW_AND_HOT);
+    } else {
+      context.go(Routes.ACCOUNT);
+    }
   }
 
   @override
@@ -33,7 +33,7 @@ class _MainScreenState extends State<MainScreen> {
       valueListenable: _selectedIndex,
       builder: (BuildContext context, int value, _) {
         return Scaffold(
-          body: Center(child: _widgetOptions.elementAt(value)),
+          body: widget.child,
           bottomNavigationBar: BottomNavigationBar(
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(

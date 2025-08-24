@@ -5,43 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4de5bb7d-b452-454c-a40e-be257a0649ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/app_bloc_observer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/di/injection.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/di/injection_module.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/networkInfo/network_info.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/platform/rest_client_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/widgets/custom_image_network_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/home/data/network/home_remote_data_source.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_state_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/router/omdb_router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_details_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/features/home/domain/entities/movies_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/features/home/domain/usecase/get_user_movies.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/gen/assets.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gen/assets.gen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/gen/colors.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gen/colors.gen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/theme/omdb_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/theme/omdb_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/utils/utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/widgets/omdb_appbar_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/widgets/omdb_appbar_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/widgets/omdb_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/widgets/omdb_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/widgets/omdb_chip.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/widgets/omdb_chip.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/widgets/widgets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/widgets/widgets.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/repositories/home_repositories_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/repositories/home_repositories_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.freezed.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/movie_entity.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/usecase/get_user_movies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/usecase/get_user_movies.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/bloc/home_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/bloc/home_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/bloc/home_cubit.freezed.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/bloc/home_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/bloc/home_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/account/account_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/account/account_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/horizontal_list_movie_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/horizontal_list_movie_widget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/main_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/main_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_promotion_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_promotion_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/new_and_hot/new_and_hot_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/new_and_hot/new_and_hot_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +88,11 @@
   "keyToString": {
     "Flutter Test.Bottom Navigation Bar.executor": "Run",
     "Flutter Test.First bottom navigation (Home) should be tappable.executor": "Run",
+    "Flutter Test.HomeSuccess with identical movies lists are equal.executor": "Run",
+    "Flutter Test.call fetchMovies with top_week.executor": "Run",
+    "Flutter Test.call fetchMovies.executor": "Run",
+    "Flutter Test.ensure cubit state call fetchMovies with top_week.executor": "Run",
+    "Flutter Test.tests in home_cubit_test.dart.executor": "Run",
     "Flutter Test.tests in home_state_test.dart.executor": "Run",
     "Flutter Test.tests in main_screen_test.dart.executor": "Run",
     "Flutter.main.dart.executor": "Run",
@@ -123,7 +107,7 @@
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/yanuarnvl/Projects/omdbapp",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -134,22 +118,27 @@
       <recent name="$PROJECT_DIR$/assets/svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.HomeSuccess with identical movies lists are equal">
-    <configuration name="Bottom Navigation Bar" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Bottom Navigation Bar" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/main_screen_test.dart" />
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="call fetchMovies with top_week" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="call fetchMovies with top_week" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="First bottom navigation (Home) should be tappable" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="First bottom navigation (Home) should be tappable" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/main_screen_test.dart" />
-      <option name="useRegexp" value="true" />
+    <configuration name="call fetchMovies" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="call fetchMovies" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
+      <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="HomeSuccess with identical movies lists are equal" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="HomeSuccess with identical movies lists are equal" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_state_test.dart" />
+    <configuration name="ensure cubit state call fetchMovies with top_week" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="ensure cubit state call fetchMovies with top_week" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in home_cubit_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
@@ -158,18 +147,13 @@
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in main_screen_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/main_screen_test.dart" />
-      <option name="useRegexp" value="false" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.HomeSuccess with identical movies lists are equal" />
+        <item itemvalue="Flutter Test.tests in home_cubit_test.dart" />
+        <item itemvalue="Flutter Test.call fetchMovies with top_week" />
+        <item itemvalue="Flutter Test.call fetchMovies" />
+        <item itemvalue="Flutter Test.ensure cubit state call fetchMovies with top_week" />
         <item itemvalue="Flutter Test.tests in home_state_test.dart" />
-        <item itemvalue="Flutter Test.tests in main_screen_test.dart" />
-        <item itemvalue="Flutter Test.Bottom Navigation Bar" />
-        <item itemvalue="Flutter Test.First bottom navigation (Home) should be tappable" />
       </list>
     </recent_temporary>
   </component>
