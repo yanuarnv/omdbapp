@@ -22,6 +22,7 @@ void main() {
   group('MainScreen Widget Tests', () {
     testWidgets('renders BottomNavigationBar with correct items', (
       WidgetTester tester,
+
     ) async {
       await tester.pumpWidget(
         MaterialApp.router(routerConfig: OmdbRouter.router),
