@@ -24,28 +24,48 @@ class $AssetsImgGen {
   /// File path: assets/img/blasted.png
   AssetGenImage get blasted => const AssetGenImage('assets/img/blasted.png');
 
+  /// File path: assets/img/play_large.png
+  AssetGenImage get playLarge =>
+      const AssetGenImage('assets/img/play_large.png');
+
   /// File path: assets/img/sample.png
   AssetGenImage get sample => const AssetGenImage('assets/img/sample.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [accountExample, blasted, sample];
+  List<AssetGenImage> get values => [
+    accountExample,
+    blasted,
+    playLarge,
+    sample,
+  ];
 }
 
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/download-icon.svg
+  SvgGenImage get downloadIcon =>
+      const SvgGenImage('assets/svg/download-icon.svg');
+
   /// File path: assets/svg/new-and-hot.svg
   SvgGenImage get newAndHot => const SvgGenImage('assets/svg/new-and-hot.svg');
 
+  /// File path: assets/svg/search-icon.svg
+  SvgGenImage get searchIcon => const SvgGenImage('assets/svg/search-icon.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [newAndHot];
+  List<SvgGenImage> get values => [downloadIcon, newAndHot, searchIcon];
 }
 
 class Assets {
   const Assets._();
 
+  static const String aEnv = '.env';
   static const $AssetsImgGen img = $AssetsImgGen();
   static const $AssetsSvgGen svg = $AssetsSvgGen();
+
+  /// List of all assets
+  static List<String> get values => [aEnv];
 }
 
 class AssetGenImage {

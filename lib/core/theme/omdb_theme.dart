@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omdbapp/core/gen/colors.gen.dart';
+import 'package:omdbapp/gen/colors.gen.dart';
 
 class OMDBTheme {
   static ThemeData get lightTheme {
