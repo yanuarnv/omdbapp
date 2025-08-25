@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4de5bb7d-b452-454c-a40e-be257a0649ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/core/router/omdb_router.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_details_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/home/domain/entities/movies_entity.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/home/domain/usecase/get_user_movies.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/features/home/data/repositories/home_repository_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/account/account_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/account/account_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/horizontal_list_movie_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/horizontal_list_movie_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/main_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/main_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/new_and_hot/new_and_hot_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/new_and_hot/new_and_hot_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/movie_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omdbapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/omdbapp.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +58,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="319FlP3tqGm4QHvfX3l7MUCuPkl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -84,33 +73,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter Test.Bottom Navigation Bar.executor": "Run",
-    "Flutter Test.First bottom navigation (Home) should be tappable.executor": "Run",
-    "Flutter Test.HomeSuccess with identical movies lists are equal.executor": "Run",
-    "Flutter Test.call fetchMovies with top_week.executor": "Run",
-    "Flutter Test.call fetchMovies.executor": "Run",
-    "Flutter Test.ensure cubit state call fetchMovies with top_week.executor": "Run",
-    "Flutter Test.tests in home_cubit_test.dart.executor": "Run",
-    "Flutter Test.tests in home_state_test.dart.executor": "Run",
-    "Flutter Test.tests in main_screen_test.dart.executor": "Run",
-    "Flutter.main.dart.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feat/home-api-integration",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yanuarnvl/Projects/omdbapp",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter Test.Bottom Navigation Bar.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.First bottom navigation (Home) should be tappable.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.HomeSuccess with identical movies lists are equal.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.call fetchMovies with top_week.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.call fetchMovies.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.ensure cubit state call fetchMovies with top_week.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.navigates to ACCOUNT route when My netflix item is tapped.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.navigates to HOME when initial.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.navigates to NEW_AND_HOT route when New &amp; Hot item is tapped.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in home_cubit_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in home_state_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in main_screen_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/home-api-integration&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yanuarnvl/Projects/omdbapp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/features/home/presentation/pages" />
@@ -119,22 +111,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="call fetchMovies with top_week" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="call fetchMovies with top_week" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
-      <option name="useRegexp" value="false" />
+    <configuration name="navigates to ACCOUNT route when My netflix item is tapped" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="navigates to ACCOUNT route when My netflix item is tapped" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" />
+      <option name="useRegexp" value="true" />
       <method v="2" />
     </configuration>
-    <configuration name="call fetchMovies" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="call fetchMovies" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
-      <option name="useRegexp" value="false" />
+    <configuration name="navigates to HOME when initial" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="navigates to HOME when initial" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" />
+      <option name="useRegexp" value="true" />
       <method v="2" />
     </configuration>
-    <configuration name="ensure cubit state call fetchMovies with top_week" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="ensure cubit state call fetchMovies with top_week" />
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_cubit_test.dart" />
-      <option name="useRegexp" value="false" />
+    <configuration name="navigates to NEW_AND_HOT route when New &amp; Hot item is tapped" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="navigates to NEW_AND_HOT route when New &amp; Hot item is tapped" />
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" />
+      <option name="useRegexp" value="true" />
       <method v="2" />
     </configuration>
     <configuration name="tests in home_cubit_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -142,18 +134,18 @@
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in home_state_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/bloc/home_state_test.dart" />
+    <configuration name="tests in main_screen_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/features/home/presentation/pages/main_screen_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.tests in main_screen_test.dart" />
+        <item itemvalue="Flutter Test.navigates to ACCOUNT route when My netflix item is tapped" />
+        <item itemvalue="Flutter Test.navigates to NEW_AND_HOT route when New &amp; Hot item is tapped" />
+        <item itemvalue="Flutter Test.navigates to HOME when initial" />
         <item itemvalue="Flutter Test.tests in home_cubit_test.dart" />
-        <item itemvalue="Flutter Test.call fetchMovies with top_week" />
-        <item itemvalue="Flutter Test.call fetchMovies" />
-        <item itemvalue="Flutter Test.ensure cubit state call fetchMovies with top_week" />
-        <item itemvalue="Flutter Test.tests in home_state_test.dart" />
       </list>
     </recent_temporary>
   </component>

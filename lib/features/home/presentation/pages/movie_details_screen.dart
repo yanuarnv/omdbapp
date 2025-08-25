@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:omdbapp/core/theme/omdb_text_style.dart';
+import 'package:omdbapp/core/widgets/custom_image_network_widget.dart';
 import 'package:omdbapp/core/widgets/omdb_button.dart';
 import 'package:omdbapp/gen/colors.gen.dart';
 
@@ -21,14 +23,17 @@ class MovieDetailsScreen extends StatelessWidget {
           height: 210,
           child: Stack(
             children: [
-              Container(
-                height: 210,
-                color: ColorValue.white.withValues(alpha: 0.16),
+              CustomImageNetworkWidget(
+                src: model.posterPath.toString(),
+                fit: BoxFit.cover,
+                aspectRatio: 2,
               ),
               Positioned(
                 right: 0,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pop();
+                  },
                   icon: Icon(Icons.close, color: Colors.white),
                 ),
               ),
